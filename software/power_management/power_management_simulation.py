@@ -3,6 +3,17 @@ import matplotlib.pyplot as plt
 import simulation
 import harvested_energy_estimation
 
+'''
+This script simulates the power management system for a rechargeable 1200 mAh battery integrated with the ThermoBeat system, considering factors such as temperature gradient, battery voltage, and device power consumption. It uses the teg_output and ltc3108_output functions from the simulation module, as well as the energy_harvested function from the harvested energy estimation module.
+
+The script generates a plot showing the battery energy level over time under the specified conditions.
+
+To generate the plot, execute the following command from the software/power_management folder:
+python power_management_simulation.py
+
+A window with the plot should appear, showing the battery energy level over time under the specified conditions, such as temperature gradient, battery capacity, and device power consumption.
+'''
+
 def simulate_power_management(temperature_gradient, battery_capacity_mAh, battery_voltage, device_power_consumption_mW, simulation_duration_hours):
     output_voltage, output_current = simulation.teg_output(temperature_gradient, 50.4, 3.11)
     output_voltage, output_current = simulation.ltc3108_output(output_voltage, output_current)
