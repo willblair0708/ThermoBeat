@@ -2,6 +2,17 @@ import argparse
 import simulation
 import harvested_energy_estimation
 
+'''
+1. Simulate the ThermoBeat system for a 3°C temperature gradient and a 2-hour duration:
+python thermobeat_cli.py 3 2 --simulate
+
+2. Estimate the harvested energy for a 3°C temperature gradient and a 2-hour duration:
+python thermobeat_cli.py 3 2 --estimate_energy
+
+3. Perform both simulation and energy estimation for a 3°C temperature gradient and a 2-hour duration:
+python thermobeat_cli.py 3 2 --simulate --estimate_energy
+'''
+
 def main():
     parser = argparse.ArgumentParser(description="ThermoBeat CLI: Interact with ThermoBeat system simulations and harvested energy estimations.")
     parser.add_argument("temperature_gradient", type=float, help="Temperature gradient across the TEG module (in °C).")
