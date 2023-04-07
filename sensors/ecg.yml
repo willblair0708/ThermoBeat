@@ -1,4 +1,4 @@
-name: ecgv101
+name: ecg_env
 channels:
   - defaults
 dependencies:
