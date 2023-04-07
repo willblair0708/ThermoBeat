@@ -3,6 +3,10 @@ from tkinter import ttk
 import simulation
 import harvested_energy_estimation
 
+'''
+This script creates a simple GUI for the ThermoBeat system simulation and harvested energy estimation. The GUI allows users to input a temperature gradient and a duration and perform simulations and energy estimations based on the input values. The simulation and energy estimation functions from the previous scripts are used to perform these calculations.
+'''
+
 class ThermoBeatGUI(tk.Tk):
     def __init__(self):
         super().__init__()
