@@ -10,6 +10,7 @@ This repository contains hardware schematics, firmware, software, and documentat
 - `firmware`: Source code and header files for the firmware running on the TEG module and LTC3108 boost converter.
 - `software`: Source code and header files for any data processing and simulation software related to the ThermoBeat project.
 - `documentation`: Design documents, test reports, and user manuals for the ThermoBeat system.
+- `sensors`: Integration with pacemaker sensory data, including machine learning models and analysis.
 
 ## Getting Started
 
