@@ -37,4 +37,17 @@ def plot_energy_harvested(temperature_gradients, harvested_energy):
 def main():
     # Use the simulation results obtained in the previous script
     temperature_gradients = np.linspace(1, 5, 50)  # An array of temperature gradients from 1°C to 5°C
-    output_voltages = [3300] * len(temperature_gradients)  # Assume a constant output voltage of 330
+    output_voltages = [3300] * len(temperature_gradients)  # Assume a constant output voltage of 3300 mV
+    output_currents = [0.1, 0.15, 0.2, 0.25, 0.3]  # Example output currents in mA
+
+    durations = [1, 2, 4, 8, 12]  # Example durations in hours
+
+    for i, duration in enumerate(durations):
+        harvested_energy = np.array([energy_harvested(gradient, duration, output_voltages[i], output_currents[i]) for gradient in temperature_gradients])
+        plot_energy_harvested(temperature_gradients, harvested_energy)
+
+    plt.show()
+
+if __name__ == "__main__":
+    main()
+
