@@ -28,4 +28,32 @@ def plot_teg_data(data):
     plt.xlabel('Temperature Gradient (°C)')
     plt.ylabel('Output')
     plt.legend()
+    plt.title('TEG Module Output vs. Temperature Gradient')
+
+def plot_boost_converter_data(data):
+    """
+    Plot LTC3108 boost converter output voltage and current vs. temperature gradient.
+
+    Args:
+    data (pd.DataFrame): A DataFrame containing the experimental data.
+    """
+    plt.figure()
+    plt.plot(data['Temperature_Gradient'], data['Boost_Converter_Output_Current'], label='Boost Converter Output Current (mA)')
+    plt.xlabel('Temperature Gradient (°C)')
+    plt.ylabel('Output Current (mA)')
+    plt.legend()
+    plt.title('Boost Converter Output Current vs. Temperature Gradient')
+
+def main():
+    data_file_path = '../data/experimental_data.csv'  # Update this path with the correct location of your data file
+
+    data = load_data(data_file_path)
+
+    plot_teg_data(data)
+    plot_boost_converter_data(data)
+
+    plt.show()
+
+if __name__ == "__main__":
+    main()
    
