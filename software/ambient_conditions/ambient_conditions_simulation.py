@@ -3,6 +3,18 @@ import matplotlib.pyplot as plt
 import simulation
 import harvested_energy_estimation
 
+'''
+This script simulates the performance of the ThermoBeat system under varying ambient temperatures and temperature gradients, using the teg_output and ltc3108_output functions from the simulation module, as well as the energy_harvested function from the harvested energy estimation module.
+
+The script generates a heatmap, showing the harvested energy as a function of ambient temperature and temperature gradient. This visualization can help identify the optimal operating conditions for the ThermoBeat system.
+
+To generate the heatmap, execute the following command from the software/ambient_conditions folder:
+python ambient_conditions_simulation.py
+
+A window with the heatmap should appear, showing the relationship between harvested energy and the input parameters of ambient temperature and temperature gradient.
+'''
+
+
 def simulate_ambient_conditions(ambient_temperatures, temperature_gradient_range, duration):
     energies = []
 
